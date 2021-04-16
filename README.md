@@ -41,7 +41,6 @@ https://www.youtube.com/watch?v=wBsSUBEUYV4
 
 오두막 에셋 후보들
 https://assetstore.unity.com/packages/3d/environments/urban/furnished-cabin-71426
-
 https://assetstore.unity.com/packages/3d/environments/urban/wasteland-cabin-94865\
 
 트리 에셋 후보들
