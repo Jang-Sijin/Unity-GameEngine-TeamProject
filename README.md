@@ -48,10 +48,11 @@ https://assetstore.unity.com/packages/3d/environments/urban/wasteland-cabin-9486
 
 트리 에셋 후보들
 https://assetstore.unity.com/packages/3d/vegetation/trees/dream-forest-tree-105297
+https://youtu.be/H-7xrJ2dZEg?t=33
 
 열쇠 에셋 후보
 https://assetstore.unity.com/packages/3d/props/furniture/key-and-lock-193317
 
 바닥 에셋 후보
-https://assetstore.unity.com/packages/2d/textures-materials/floors/yughues-free-ground-materials-13001
+https://youtu.be/H-7xrJ2dZEg?t=33
 
