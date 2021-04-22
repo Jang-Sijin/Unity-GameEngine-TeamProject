@@ -56,3 +56,5 @@ https://assetstore.unity.com/packages/3d/props/furniture/key-and-lock-193317
 바닥 에셋 후보
 https://youtu.be/H-7xrJ2dZEg?t=33
 
+맵 생성 요약
+https://www.youtube.com/watch?v=ddy12WHqt-M
