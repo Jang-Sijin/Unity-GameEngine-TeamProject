@@ -51,3 +51,7 @@ https://assetstore.unity.com/packages/3d/vegetation/trees/dream-forest-tree-1052
 
 열쇠 에셋 후보
 https://assetstore.unity.com/packages/3d/props/furniture/key-and-lock-193317
+
+바닥 에셋 후보
+https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
+
