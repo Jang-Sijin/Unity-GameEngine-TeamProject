@@ -60,22 +60,17 @@
 GitHub 튜토리얼
 https://www.youtube.com/watch?v=wBsSUBEUYV4
 
-오두막 에셋 후보들
-https://assetstore.unity.com/packages/3d/environments/urban/furnished-cabin-71426
-https://assetstore.unity.com/packages/3d/environments/urban/wasteland-cabin-94865\
-
-트리 에셋 후보들
-https://assetstore.unity.com/packages/3d/vegetation/trees/dream-forest-tree-105297
-https://youtu.be/H-7xrJ2dZEg?t=33
-
 열쇠 에셋 후보
 https://assetstore.unity.com/packages/3d/props/furniture/key-and-lock-193317
-
-바닥 에셋 후보
-https://youtu.be/H-7xrJ2dZEg?t=33
 
 맵 생성 요약
 https://www.youtube.com/watch?v=ddy12WHqt-M
 
 집 사용 에셋 
 https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303
+
+스카이 박스 에셋
+https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-lite-116333?q=statue&orderBy=1
+
+후레쉬 에셋
+https://assetstore.unity.com/packages/3d/props/tools/flashlight-pro-53053
