@@ -8,7 +8,7 @@ public class FpsController : MonoBehaviour
     public Rigidbody fpsRigidBody;
     public bool IsInvertYaxis = false; // 상하 반전 유무
     public float movementSpeed = 3;
-
+    
     // Start is called before the first frame update
     void Start()
     {
