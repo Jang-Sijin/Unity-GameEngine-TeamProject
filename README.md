@@ -72,3 +72,6 @@ https://youtu.be/H-7xrJ2dZEg?t=33
 
 맵 생성 요약
 https://www.youtube.com/watch?v=ddy12WHqt-M
+
+집 사용 에셋 
+https://assetstore.unity.com/packages/3d/environments/urban/the-shed-10303
