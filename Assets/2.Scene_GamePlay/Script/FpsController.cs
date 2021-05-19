@@ -12,6 +12,7 @@ public class FpsController : MonoBehaviour
     public GameObject SetActiveUiStop;
     public bool UiCheck = false;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +71,7 @@ public class FpsController : MonoBehaviour
             // {
             //     isInvert = 1;
             // }
+
             fpsCamera.transform.eulerAngles =
                 fpsCamera.transform.eulerAngles +
                 new Vector3(mouseY * (IsInvertYaxis ? 1 : -1), 0, 0); // 조건식을 3항식으로 대체했음.
