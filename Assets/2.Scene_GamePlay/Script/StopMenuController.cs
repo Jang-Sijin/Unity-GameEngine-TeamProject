@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StopMenuController : MonoBehaviour
 {
@@ -17,6 +18,6 @@ public class StopMenuController : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
