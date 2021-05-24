@@ -87,3 +87,6 @@ https://assetstore.unity.com/packages/3d/props/furniture/pbr-game-ready-desks-pa
 
 천사 조각상 에셋
 https://assetstore.unity.com/packages/3d/environments/fantasy/angel-statue-27594
+
+슬랜더맨 에셋
+https://assetstore.unity.com/packages/3d/characters/scary-man-free-173376
