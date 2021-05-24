@@ -84,3 +84,6 @@ https://assetstore.unity.com/packages/3d/props/tools/flashlight-pro-53053
 
 책상 에셋
 https://assetstore.unity.com/packages/3d/props/furniture/pbr-game-ready-desks-pack-116137
+
+천사 조각상 에셋
+https://assetstore.unity.com/packages/3d/environments/fantasy/angel-statue-27594
