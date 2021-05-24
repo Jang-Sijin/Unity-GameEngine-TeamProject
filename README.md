@@ -81,3 +81,6 @@ https://assetstore.unity.com/packages/3d/environments/sci-fi/real-stars-skybox-l
 
 후레쉬 에셋
 https://assetstore.unity.com/packages/3d/props/tools/flashlight-pro-53053
+
+책상 에셋
+https://assetstore.unity.com/packages/3d/props/furniture/pbr-game-ready-desks-pack-116137
