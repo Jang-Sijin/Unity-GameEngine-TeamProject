@@ -9,7 +9,7 @@ public class FpsController : MonoBehaviour
     public bool IsInvertYaxis = false; // 상하 반전 유무
     public float movementSpeed = 3;
     public GameObject SetActiveUiCommand;
-    public GameObject SetActiveUiStop;
+    public GameObject SetActiveUiPause;
     public bool UiCheck = false;
     
     
@@ -17,6 +17,7 @@ public class FpsController : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;// 마우스 포인터가 보이지 않도록 설정한다.
+        // 마우스 좌표가 안움직여 Pause 메뉴 버튼 클릭이 안되어 주석 처리를 함
         Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
     }
 
@@ -29,11 +30,13 @@ public class FpsController : MonoBehaviour
             {
                 UiCheck = true;
                 SetActiveUiCommand.SetActive(true);
+                Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
             }
             else
             {
                 UiCheck = false;
                 SetActiveUiCommand.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -41,12 +44,14 @@ public class FpsController : MonoBehaviour
             if (!UiCheck)
             {
                 UiCheck = true;
-                SetActiveUiStop.SetActive(true);
+                SetActiveUiPause.SetActive(true);
+                Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
             }
             else
             {
                 UiCheck = false;
-                SetActiveUiStop.SetActive(false);
+                SetActiveUiPause.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
             }
         }
 
