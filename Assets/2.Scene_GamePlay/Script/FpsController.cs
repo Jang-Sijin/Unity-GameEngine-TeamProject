@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,8 @@ public class FpsController : MonoBehaviour
     public GameObject SetActiveUiCommand;
     public GameObject SetActiveUiPause;
     public bool UiCheck = false;
-    
+
+    [HideInInspector, NonSerialized] public SavePlayerData savePlayerData;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,11 @@ public class FpsController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
     }
 
+    private void Awake()
+    {
+        savePlayerData = new SavePlayerData();
+    }
+    
     // Update is called once per frame
     void Update()
     {       
@@ -98,6 +105,9 @@ public class FpsController : MonoBehaviour
 
             fpsRigidBody.velocity = (transform.forward * (keyboardY * movementSpeed)) +
                                     (transform.right * (keyboardX * movementSpeed));
+
+            savePlayerData.playerPosition = transform.position;
+            savePlayerData.playerRotationEuler = transform.rotation.eulerAngles;
         }
     }
 }
