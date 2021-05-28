@@ -104,7 +104,8 @@ public class FpsController : MonoBehaviour
             }
 
             fpsRigidBody.velocity = (transform.forward * (keyboardY * movementSpeed)) +
-                                    (transform.right * (keyboardX * movementSpeed));
+                                    (transform.right * (keyboardX * movementSpeed)) + 
+                                    new Vector3(0, fpsRigidBody.velocity.y, 0);
 
             savePlayerData.playerPosition = transform.position;
             savePlayerData.playerRotationEuler = transform.rotation.eulerAngles;
