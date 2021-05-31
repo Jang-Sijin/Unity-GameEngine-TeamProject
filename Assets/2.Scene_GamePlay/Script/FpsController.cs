@@ -11,6 +11,7 @@ public class FpsController : MonoBehaviour
     public float movementSpeed = 3;
     public GameObject SetActiveUiCommand;
     public GameObject SetActiveUiPause;
+    public GameObject SetActiveUiOption;
     public bool UiCheck = false;
 
     [HideInInspector, NonSerialized] public SavePlayerData savePlayerData;
@@ -31,34 +32,40 @@ public class FpsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1) && !SetActiveUiPause.activeSelf && !SetActiveUiOption.activeSelf)
         {
             if (!UiCheck)
             {
                 UiCheck = true;
                 SetActiveUiCommand.SetActive(true);
                 Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
+                //Time.timeScale = 0.0f;
             }
             else
             {
                 UiCheck = false;
                 SetActiveUiCommand.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
+                //Time.timeScale = 1.0f;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && !SetActiveUiCommand.activeSelf)
         {
             if (!UiCheck)
             {
                 UiCheck = true;
                 SetActiveUiPause.SetActive(true);
                 Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
+                //Time.timeScale = 0.0f;
             }
             else
             {
                 UiCheck = false;
                 SetActiveUiPause.SetActive(false);
+                SetActiveUiOption.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
+                //Time.timeScale = 1.0f;
             }
         }
 
