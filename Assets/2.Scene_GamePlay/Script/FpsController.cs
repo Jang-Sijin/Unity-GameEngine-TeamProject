@@ -12,6 +12,8 @@ public class FpsController : MonoBehaviour
     public GameObject SetActiveUiCommand;
     public GameObject SetActiveUiPause;
     public GameObject SetActiveUiOption;
+    public GameObject SetActiveUiQuit;
+
     public bool UiCheck = false;
 
     [HideInInspector, NonSerialized] public SavePlayerData savePlayerData;
@@ -32,7 +34,7 @@ public class FpsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        if (Input.GetKeyDown(KeyCode.F1) && !SetActiveUiPause.activeSelf && !SetActiveUiOption.activeSelf)
+        if (Input.GetKeyDown(KeyCode.F1) && !SetActiveUiPause.activeSelf && !SetActiveUiOption.activeSelf && !SetActiveUiQuit.activeSelf)
         {
             if (!UiCheck)
             {
@@ -50,7 +52,7 @@ public class FpsController : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.Escape) && !SetActiveUiCommand.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) && !SetActiveUiCommand.activeSelf && !SetActiveUiQuit.activeSelf)
         {
             if (!UiCheck)
             {
