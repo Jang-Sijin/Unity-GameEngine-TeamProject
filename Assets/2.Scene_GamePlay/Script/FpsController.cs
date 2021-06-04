@@ -56,6 +56,7 @@ public class FpsController : MonoBehaviour
         {
             if (!UiCheck)
             {
+                Cursor.visible = true;// 마우스 포인터가 보이도록 설정한다.
                 UiCheck = true;
                 SetActiveUiPause.SetActive(true);
                 Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
@@ -63,6 +64,7 @@ public class FpsController : MonoBehaviour
             }
             else
             {
+                Cursor.visible = false;// 마우스 포인터가 보이지 않도록 설정한다.
                 UiCheck = false;
                 SetActiveUiPause.SetActive(false);
                 SetActiveUiOption.SetActive(false);
