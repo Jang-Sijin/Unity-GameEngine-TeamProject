@@ -17,6 +17,7 @@ public class MoveToward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(player.transform);
         transform.position += (player.transform.position - transform.position).normalized * speed * Time.deltaTime;
     }
 }
