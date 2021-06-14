@@ -27,8 +27,6 @@ public class SlenderExample : MonoBehaviour
     float lookAtWeight;
     float timeFaceCh, facepWeight = 100, timeFace = 10;
     bool faceCh = true;
-
-
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -42,7 +40,6 @@ public class SlenderExample : MonoBehaviour
         lookAtTargetPosition = target.position + tr.forward;
         lookAtPosition = head.position + tr.forward;
 
-        //--------------
     }
 
 
@@ -71,8 +68,6 @@ public class SlenderExample : MonoBehaviour
             body.SetBlendShapeWeight(0, var0);
             music.volume = var0 * 0.1f;
         }
-
-        //--------------
     }
 
 
@@ -95,5 +90,5 @@ public class SlenderExample : MonoBehaviour
     }
 
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }

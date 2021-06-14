@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FpsController : MonoBehaviour
@@ -41,14 +39,14 @@ public class FpsController : MonoBehaviour
                 UiCheck = true;
                 SetActiveUiCommand.SetActive(true);
                 Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
-                //Time.timeScale = 0.0f;
+                Time.timeScale = 0.0f;
             }
             else
             {
                 UiCheck = false;
                 SetActiveUiCommand.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
-                //Time.timeScale = 1.0f;
+                Time.timeScale = 1.0f;
             }
         }
         
@@ -60,7 +58,7 @@ public class FpsController : MonoBehaviour
                 UiCheck = true;
                 SetActiveUiPause.SetActive(true);
                 Cursor.lockState = CursorLockMode.None; // 마우스 포인터가 움직이도록 한다.
-                //Time.timeScale = 0.0f;
+                Time.timeScale = 0.0f;
             }
             else
             {
@@ -69,7 +67,7 @@ public class FpsController : MonoBehaviour
                 SetActiveUiPause.SetActive(false);
                 SetActiveUiOption.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
-                //Time.timeScale = 1.0f;
+                Time.timeScale = 1.0f;
             }
         }
 
