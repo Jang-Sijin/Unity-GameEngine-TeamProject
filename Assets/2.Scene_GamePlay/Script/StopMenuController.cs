@@ -14,10 +14,12 @@ public class StopMenuController : MonoBehaviour
         fps = GameObject.Find("Player").GetComponent<FpsController>();
         fps.UiCheck = false;
         Cursor.lockState = CursorLockMode.Locked; // 마우스 포인터가 가운데로 갱신하도록 한다.
+        Time.timeScale = 1.0f;
     }
 
     public void Quit()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
