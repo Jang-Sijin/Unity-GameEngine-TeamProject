@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,9 @@ public class ActionController : MonoBehaviour
     [SerializeField]
     private Text actionText;
 
+    //------------------------------------------
+    public Quest_Text questtext;
+    
     // Update is called once per frame
     void Update()
     {
@@ -40,9 +44,14 @@ public class ActionController : MonoBehaviour
         {
             if(hitInfo.transform != null)
             {
+                questtext = GameObject.Find("In_Game_Ui").GetComponent<Quest_Text>();
+                questtext.Quest_item_count++;
                 Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득했습니다");
                 Destroy(hitInfo.transform.gameObject);
                 InfoDisappear();
+                
+                //-------------------------------------
+
             }
         }
     }
