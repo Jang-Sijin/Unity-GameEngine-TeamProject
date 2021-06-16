@@ -17,7 +17,9 @@ public class MoveToward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform);
-        transform.position += (player.transform.position - transform.position).normalized * speed * Time.deltaTime;
+        Vector3 trans = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.LookAt(trans);
+        transform.position += ((player.transform.position - transform.position).normalized * speed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }
