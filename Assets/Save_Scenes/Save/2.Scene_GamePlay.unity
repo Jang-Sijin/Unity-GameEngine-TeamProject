@@ -1816,7 +1816,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3866704389850335701, guid: a2791ea8cc7c0a24b955b41f674e279c, type: 3}
   m_PrefabInstance: {fileID: 1048683039}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &367241590
+--- !u!114 &367241591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1825,11 +1825,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 367241589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2568070d20fe21743923b358e91e0746, type: 3}
+  m_Script: {fileID: 11500000, guid: e4df6b417b81aac4eb76e4af50d7a3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SceneTransition: {fileID: 541525635}
-  start_button: {fileID: 0}
 --- !u!1 &389162183
 GameObject:
   m_ObjectHideFlags: 0
