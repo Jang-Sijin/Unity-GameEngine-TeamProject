@@ -27,7 +27,7 @@ public class AudioManger : MonoBehaviour
             
             PlayerPrefs.SetFloat(BackGroundPref,backgroundValue);
             PlayerPrefs.SetFloat(EffectPref,effectValue);
-            PlayerPrefs.SetFloat(FirstPlay,-1);
+            PlayerPrefs.SetInt(FirstPlay,-1);
         }
         else
         {

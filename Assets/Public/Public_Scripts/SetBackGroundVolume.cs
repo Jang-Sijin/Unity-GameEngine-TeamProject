@@ -9,6 +9,7 @@ public class SetBackGroundVolume : MonoBehaviour
     
     private static readonly string BackGroundPref = "BackGroundPref";
     public AudioMixer mixer;
+    
     public void SetLevel(float sliderValue)
     {
         
