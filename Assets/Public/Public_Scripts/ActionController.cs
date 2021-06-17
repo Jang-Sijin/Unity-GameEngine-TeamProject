@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class ActionController : MonoBehaviour
@@ -58,6 +59,7 @@ public class ActionController : MonoBehaviour
                 if(questtext.Quest_item_count >= Items.MaxCnt)
                 {
                     Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 활성화 성공!");
+                    SceneManager.LoadScene(3);
                 }
                 else
                 {
@@ -112,7 +114,7 @@ public class ActionController : MonoBehaviour
 
     private void ActiveInfoAppear()
     {
-        if (questtext.Quest_item_count >= Items.MaxCnt)
+        if (questtext.Quest_item_count <= Items.MaxCnt)
         {
             pickupActivated = true;
             activeText.gameObject.SetActive(true);

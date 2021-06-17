@@ -23,14 +23,25 @@ public class LoadScene : MonoBehaviour
             start_button.GetComponent<Button>();
             start_button.onClick.AddListener(fClick);
         }
+        
     }
 
-    void fClick()
+    void OnCollisionEnter(Collision collision)
     {
-            StartCoroutine(transitionNextScene(SceneManager.GetActiveScene().buildIndex));
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(transitionNextScene(SceneManager.GetActiveScene().buildIndex,1));
+        }
     }
     
-    IEnumerator transitionNextScene(int levelIndex)
+    void fClick()
+    {
+            StartCoroutine(transitionNextScene(SceneManager.GetActiveScene().buildIndex,0));
+    }
+    
+    // value 버튼 클릭인가 아님 충돌처리인가로 씬 이동 결정
+    // 0 : 메인씬 1~: 다른 씬이동
+    public IEnumerator transitionNextScene(int levelIndex,int value)
     {
         SceneTransition.SetTrigger("Start");
         
@@ -41,7 +52,14 @@ public class LoadScene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0);
+            if (value == 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
     

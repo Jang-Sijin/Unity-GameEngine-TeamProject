@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Running_Timer : MonoBehaviour
 {
-    private float timerCount = 5.0f;
+    private float timerCount = 4.0f;
 
     void Update()
     {
