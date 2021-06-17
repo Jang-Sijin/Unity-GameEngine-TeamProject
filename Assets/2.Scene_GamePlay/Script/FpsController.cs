@@ -108,7 +108,7 @@ public class FpsController : MonoBehaviour
             }
             else
             {
-                movementSpeed = 3;
+                movementSpeed = 18;
                 // print(movementSpeed);
             }
 

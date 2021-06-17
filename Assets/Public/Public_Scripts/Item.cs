@@ -15,7 +15,7 @@ public class Item : ScriptableObject
     public enum ItemType
     {
         KeyItem, // 키 아이템
-        Used, // 상호작용 타입
+        UsedRadio, // 상호작용 타입
         ETC // 기타
     }
 

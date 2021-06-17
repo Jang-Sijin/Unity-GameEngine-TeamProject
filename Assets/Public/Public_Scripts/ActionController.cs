@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
@@ -11,6 +10,7 @@ public class ActionController : MonoBehaviour
     private float range; // 습득 가능한 최대 거리.
     private bool pickupActivated = false; // 습득 가능할 시 true.
     private RaycastHit hitInfo; // 총돌체 정보 저장.
+    private Quest_Text questtext;
 
     // 아이템 레이어에만 반응하도록 레이어 마스크를 설정.
     [SerializeField]
@@ -19,13 +19,16 @@ public class ActionController : MonoBehaviour
     // 필요한 컴포넌트.
     [SerializeField]
     private Text actionText;
+    [SerializeField]
+    private Text activeText;
+    // -----------------------------------------
 
     //------------------------------------------
-    private Quest_Text questtext;
     private AudioSource backGroundMixer;
     private AudioSource pageOneMixer;
     private AudioSource pageTwoMixer;
     
+
     // Update is called once per frame
     void Update()
     {
@@ -49,11 +52,23 @@ public class ActionController : MonoBehaviour
             if(hitInfo.transform != null)
             {
                 questtext = GameObject.Find("In_Game_Ui").GetComponent<Quest_Text>();
-                questtext.Quest_item_count++;
+                
+                //-------------------------------------
+
+                if(questtext.Quest_item_count >= Items.MaxCnt)
+                {
+                    Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 활성화 성공!");
+                }
+                else
+                {
+                    questtext.Quest_item_count++;
+                    Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득했습니다");
+                    Destroy(hitInfo.transform.gameObject);
+                }
+
+                
                 if (questtext.Quest_item_count >= 1 && questtext.Quest_item_count <= 2)
                 {
-                    backGroundMixer = GameObject.Find("Background_Audio").GetComponent<AudioSource>();
-                    backGroundMixer.enabled = false;
                     pageOneMixer = GameObject.Find("Page1_Audio").GetComponent<AudioSource>();
                     pageOneMixer.enabled = true;
                 }
@@ -64,12 +79,8 @@ public class ActionController : MonoBehaviour
                     pageTwoMixer = GameObject.Find("Page2_Audio").GetComponent<AudioSource>();
                     pageTwoMixer.enabled = true;
                 }
-                Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득했습니다");
-                Destroy(hitInfo.transform.gameObject);
-                InfoDisappear();
-                
-                //-------------------------------------
 
+                InfoDisappear();
             }
         }
     }
@@ -82,6 +93,10 @@ public class ActionController : MonoBehaviour
             {
                 ItemInfoAppear();
             }
+            else if(hitInfo.transform.tag == "Active")
+            {
+                ActiveInfoAppear();
+            }
             
         }
         else
@@ -90,14 +105,31 @@ public class ActionController : MonoBehaviour
 
     private void ItemInfoAppear()
     {
-        pickupActivated = true;
-        actionText.gameObject.SetActive(true);
-        actionText.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득 " + "(E)";
+            pickupActivated = true;
+            actionText.gameObject.SetActive(true);
+            actionText.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득 " + "(E)";
+    }
+
+    private void ActiveInfoAppear()
+    {
+        if (questtext.Quest_item_count >= Items.MaxCnt)
+        {
+            pickupActivated = true;
+            activeText.gameObject.SetActive(true);
+            activeText.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 활성화 " + "(E)";
+        }
+        else
+        {
+            pickupActivated = false;
+            activeText.gameObject.SetActive(true);
+            activeText.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 활성화 불가능";
+        }
     }
 
     private void InfoDisappear()
     {
         pickupActivated = false;
         actionText.gameObject.SetActive(false);
+        activeText.gameObject.SetActive(false);
     }
 }
