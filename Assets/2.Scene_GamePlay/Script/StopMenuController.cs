@@ -20,6 +20,5 @@ public class StopMenuController : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

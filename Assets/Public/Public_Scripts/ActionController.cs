@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class ActionController : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class ActionController : MonoBehaviour
     private Text actionText;
 
     //------------------------------------------
-    public Quest_Text questtext;
+    private Quest_Text questtext;
+    private AudioSource backGroundMixer;
+    private AudioSource pageOneMixer;
+    private AudioSource pageTwoMixer;
     
     // Update is called once per frame
     void Update()
@@ -46,6 +50,20 @@ public class ActionController : MonoBehaviour
             {
                 questtext = GameObject.Find("In_Game_Ui").GetComponent<Quest_Text>();
                 questtext.Quest_item_count++;
+                if (questtext.Quest_item_count >= 1 && questtext.Quest_item_count <= 2)
+                {
+                    backGroundMixer = GameObject.Find("Background_Audio").GetComponent<AudioSource>();
+                    backGroundMixer.enabled = false;
+                    pageOneMixer = GameObject.Find("Page1_Audio").GetComponent<AudioSource>();
+                    pageOneMixer.enabled = true;
+                }
+                else if (questtext.Quest_item_count >= 3 && questtext.Quest_item_count <= 4)
+                {
+                    pageOneMixer = GameObject.Find("Page1_Audio").GetComponent<AudioSource>();
+                    pageOneMixer.enabled = false;
+                    pageTwoMixer = GameObject.Find("Page2_Audio").GetComponent<AudioSource>();
+                    pageTwoMixer.enabled = true;
+                }
                 Debug.Log(hitInfo.transform.GetComponent<ItemPickUp>().item.itemName + " 획득했습니다");
                 Destroy(hitInfo.transform.gameObject);
                 InfoDisappear();
