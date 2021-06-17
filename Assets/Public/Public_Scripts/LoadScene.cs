@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
     {
         SceneTransition.SetTrigger("Start");
         
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(3.0f);
         if (levelIndex == 0)
         {
             SceneManager.LoadScene(levelIndex+1);
