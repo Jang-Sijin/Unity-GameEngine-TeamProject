@@ -508,10 +508,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1656866007}
   m_HandleRect: {fileID: 2066296555}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.866
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -701,10 +701,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1916782803}
   m_HandleRect: {fileID: 1367268699}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.02
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3764,8 +3764,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 1
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -3849,7 +3849,7 @@ AudioSource:
   m_GameObject: {fileID: 1394525657}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 963540a67beb1394abf931ff31796422, type: 2}
   m_audioClip: {fileID: 8300000, guid: 4212a1777211e0b4ab67e8af4b1461ef, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
@@ -3860,8 +3860,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 1
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
