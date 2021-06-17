@@ -14,6 +14,7 @@ public class Player_Dead_Trigger : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)

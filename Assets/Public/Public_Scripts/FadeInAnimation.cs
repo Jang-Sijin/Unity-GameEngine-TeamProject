@@ -18,6 +18,7 @@ public class FadeInAnimation : MonoBehaviour
         else
         {
             SceneManager.LoadScene(0);
+            levelIndex = 0;
         }
     }
 }
