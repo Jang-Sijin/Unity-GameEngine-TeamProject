@@ -9,18 +9,18 @@ public class Player_Collider_Trigger_Event : MonoBehaviour
 {
     public GameObject enemy;
     public AudioClip[] collisionSound;
-    public bool checkExit;
+    public bool Checkcollider;
+
     void Awake()
     {
-        checkExit = false;
+        Checkcollider = false;
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == enemy && !checkExit)
+        if (other.gameObject == enemy && Checkcollider == false)
         {
-            checkExit = true;
             AudioSource.PlayClipAtPoint(collisionSound[Random.Range(0,collisionSound.Length)],transform.position);
             Debug.Log("범위 충돌함");
         }   
@@ -28,9 +28,9 @@ public class Player_Collider_Trigger_Event : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == enemy && checkExit)
+        if (other.gameObject == enemy && Checkcollider == true)
         {
-            checkExit = false;
+            Checkcollider = false;
         }
     }
 }
