@@ -2,6 +2,14 @@
 # Unity-GameEngine-TeamProject
 게임엔진1_팀프로젝트
 ------------------------------------------------
+https://www.youtube.com/watch?v=MC4yK0L4l04
+
+[↑ 클리어 영상]
+
+https://www.youtube.com/watch?v=RDIFQQQfr0I
+
+[↑ UI 소개 및 플레이어 사망 패턴 영상]
+------------------------------------------------
 [장시진]
 
 플레이어 카메라 구현
