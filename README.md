@@ -67,10 +67,10 @@ https://www.youtube.com/watch?v=wBsSUBEUYV4
 https://assetstore.unity.com/packages/audio/ambient/horror-ambient-album-082318-127190
 03.woods
 
-동상이 나왔을 때 사운드 후보
+사운드 후보
 https://assetstore.unity.com/packages/audio/ambient/ambient-horror-sound-fx-free-64527
 
-열쇠 에셋 후보
+열쇠 에셋
 https://assetstore.unity.com/packages/3d/props/furniture/key-and-lock-193317
 
 맵 생성 요약
