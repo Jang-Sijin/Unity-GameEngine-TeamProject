@@ -1,10 +1,12 @@
 @ -0,0 +1,53 @@
 # Unity-GameEngine-TeamProject
 게임엔진1_팀프로젝트
+
+Game Name: The Silence Forest
 ------------------------------------------------
 https://www.youtube.com/watch?v=MC4yK0L4l04
 
-[↑ 클리어 영상]
+[↑ 게임 클리어 영상]
 
 https://www.youtube.com/watch?v=RDIFQQQfr0I
 
