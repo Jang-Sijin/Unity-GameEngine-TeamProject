@@ -12,6 +12,8 @@ https://www.youtube.com/watch?v=RDIFQQQfr0I
 
 [↑ UI 소개 및 플레이어 사망 패턴 영상]
 
+![image](https://user-images.githubusercontent.com/76439399/223915018-2793f2e0-2a45-4279-be9d-83e14bd8f6c9.png)
+![image](https://user-images.githubusercontent.com/76439399/223915094-8c7ae336-58ce-42b8-b1a9-b3567d6845e9.png)
 ------------------------------------------------
 [장시진]
 
